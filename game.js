@@ -1,7 +1,9 @@
 var start=document.getElementById("start");
 var board=document.getElementById("board");
+var first=0;
 
 var arr=["1","2","3","4","1","2","3","4"];
+var cArr=["0","0"];
 
 start.addEventListener('click',startGame);
 
@@ -19,6 +21,7 @@ function startGame(){
     board.innerHTML=html;
 }
     function  check(image,k){
+        
         document.getElementById(k).src="assets/"+image+".jpg";
 
     }
