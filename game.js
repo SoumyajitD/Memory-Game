@@ -11,7 +11,7 @@ function startGame(){
     for(var image of arr){
         html+="<img src='assets/blank.jpg' style='max-width:15%' onClick=check('"+image+"','"+k+"') id='"+k+"'/>";
         if(k==4){
-            html+="<<br>";
+            html+="<br>";
         }
         k++;
     }
