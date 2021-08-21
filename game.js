@@ -1,6 +1,7 @@
 var start=document.getElementById("start");
 var board=document.getElementById("board");
 var first=0;
+firstID=0;
 
 var arr=["1","2","3","4","1","2","3","4"];
 var cArr=["0","0"];
@@ -21,7 +22,26 @@ function startGame(){
     board.innerHTML=html;
 }
     function  check(image,k){
-        
+        if(first==0){
+            first=image;
+            firstID=k;
+        }
+        else{
+            if(first==image){
+                first=0;
+                // alert("correct");
+                document.getElementById(k).src="assets/"+image+".jpg";
+                document.getElementById(firstID).src="assets/"+image+".jpg";
+                firstID=0;
+            }
+            else{
+                // alert("wrong");
+              
+                first=0;
+
+            }
+
+        }
         document.getElementById(k).src="assets/"+image+".jpg";
 
     }
