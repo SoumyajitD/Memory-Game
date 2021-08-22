@@ -106,7 +106,7 @@ function check(image, k) {
                 }, 500);
             }
             first = 0;
-            
+            //add
         }
     }
 
