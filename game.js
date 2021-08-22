@@ -18,13 +18,46 @@ var appendTens = document.getElementById("tens");
 var appendSeconds = document.getElementById("seconds");
 
 
+function reStart(){
+    
+    location.reload();
+    
+
+}
+
+startGame();
 
 
+function startTimer () {
+    tens++; 
+      
+    if(tens < 9){
+      appendTens.innerHTML = "0" + tens;
+    }
+      
+    if (tens > 9){
+      appendTens.innerHTML = tens;
+        
+    } 
+      
+    if (tens > 59) {
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
+    }
+      
+    if (seconds > 9){
+      appendSeconds.innerHTML = seconds;
+    }
+   
+    
+  }
 
+  var timer=setInterval(startTimer,1000);
 function startGame() {
     
-    var seconds = 00; 
-    var tens = 00;  
+     
     arr=arr.sort( () => .5 - Math.random() ); //Biased 
     
     var html = "";
@@ -38,31 +71,8 @@ function startGame() {
     }
     // alert(k);
     board.innerHTML = html;
-    setInterval(function startTimer () {
-        tens++; 
-          
-        if(tens < 9){
-          appendTens.innerHTML = "0" + tens;
-        }
-          
-        if (tens > 9){
-          appendTens.innerHTML = tens;
-            
-        } 
-          
-        if (tens > 59) {
-          seconds++;
-          appendSeconds.innerHTML = "0" + seconds;
-          tens = 0;
-          appendTens.innerHTML = "0" + 0;
-        }
-          
-        if (seconds > 9){
-          appendSeconds.innerHTML = seconds;
-        }
-        
-        
-      },1000);
+   
+      
 }
 
 function check(image, k) {
@@ -79,12 +89,18 @@ function check(image, k) {
                 
                 document.getElementById(k).src = "assets/" + image + ".jpg";
                 // alert("correct");
+
+                document.getElementById(firstID).removeAttribute('onClick');
+                    document.getElementById(k).removeAttribute('onClick');
                 total_check++;
                 if(total_check==total){
                     // alert("Win");
-                    startGame();
+                    
                     total_check=0;
-                    location.reload();
+                    board.innerHTML="You win Hoorah!"+" Your time is "+seconds+":"+tens;
+                    clearInterval(timer);
+                    
+                    
                     
                 }
                
