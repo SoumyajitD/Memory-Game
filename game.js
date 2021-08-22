@@ -17,31 +17,7 @@ var tens = 00;
 var appendTens = document.getElementById("tens");
 var appendSeconds = document.getElementById("seconds");
 
-setInterval(function startTimer () {
-    tens++; 
-      
-    if(tens < 9){
-      appendTens.innerHTML = "0" + tens;
-    }
-      
-    if (tens > 9){
-      appendTens.innerHTML = tens;
-        
-    } 
-      
-    if (tens > 59) {
-      seconds++;
-      appendSeconds.innerHTML = "0" + seconds;
-      tens = 0;
-      appendTens.innerHTML = "0" + 0;
-    }
-      
-    if (seconds > 9){
-      appendSeconds.innerHTML = seconds;
-    }
-    
-    
-  },1000);
+
 
 
 
@@ -59,6 +35,31 @@ function startGame() {
     }
     // alert(k);
     board.innerHTML = html;
+    setInterval(function startTimer () {
+        tens++; 
+          
+        if(tens < 9){
+          appendTens.innerHTML = "0" + tens;
+        }
+          
+        if (tens > 9){
+          appendTens.innerHTML = tens;
+            
+        } 
+          
+        if (tens > 59) {
+          seconds++;
+          appendSeconds.innerHTML = "0" + seconds;
+          tens = 0;
+          appendTens.innerHTML = "0" + 0;
+        }
+          
+        if (seconds > 9){
+          appendSeconds.innerHTML = seconds;
+        }
+        
+        
+      },1000);
 }
 
 function check(image, k) {
