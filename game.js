@@ -4,15 +4,48 @@ var first = 0;
 firstID = 0;
 
 var arr = ["1", "2", "3", "4", "1", "2", "3", "4"];
+// var elem=arr.length()/2;
+// var check=0;
 var cArr = ["0", "0"];
 var arrClicked=[];
 
 start.addEventListener('click', startGame);
 
+var seconds = 00; 
+var tens = 00; 
+var appendTens = document.getElementById("tens");
+var appendSeconds = document.getElementById("seconds");
+
+setInterval(function startTimer () {
+    tens++; 
+      
+    if(tens < 9){
+      appendTens.innerHTML = "0" + tens;
+    }
+      
+    if (tens > 9){
+      appendTens.innerHTML = tens;
+        
+    } 
+      
+    if (tens > 59) {
+      seconds++;
+      appendSeconds.innerHTML = "0" + seconds;
+      tens = 0;
+      appendTens.innerHTML = "0" + 0;
+    }
+      
+    if (seconds > 9){
+      appendSeconds.innerHTML = seconds;
+    }
+    
+  },1000);
+
 
 
 function startGame() {
     arr=arr.sort( () => .5 - Math.random() ); //Biased 
+    
     var html = "";
     var k = 1;
     for (var image of arr) {
