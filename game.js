@@ -60,9 +60,7 @@ function startGame() {
     // alert(k);
     board.innerHTML = html;
 }
-function resetTimer(){
-    break startTimer();
-}
+
 function check(image, k) {
     if (firstID != k) {
         if (first == 0) {
@@ -82,7 +80,7 @@ function check(image, k) {
                     alert("Win");
                     startGame();
                     total_check=0;
-                    resetTimer();
+                    
                 }
                
 
