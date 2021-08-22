@@ -81,7 +81,7 @@ function check(image, k) {
                 // alert("correct");
                 total_check++;
                 if(total_check==total){
-                    alert("Win");
+                    // alert("Win");
                     startGame();
                     total_check=0;
                     location.reload();
