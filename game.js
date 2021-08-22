@@ -76,6 +76,7 @@ function check(image, k) {
                 total_check++;
                 if(total_check==total){
                     alert("Win");
+                    startGame();
                 }
                
 
