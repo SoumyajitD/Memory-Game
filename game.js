@@ -72,7 +72,7 @@ function check(image, k) {
                 
                 document.getElementById(k).src = "assets/" + image + ".jpg";
                 // alert("correct");
-                check=1;
+                check++;
                 if(check==count){
                     alert("Win");
                 }
