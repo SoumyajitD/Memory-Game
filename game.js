@@ -7,6 +7,8 @@ var arr = ["1", "2", "3", "4", "1", "2", "3", "4"];
 
 var cArr = ["0", "0"];
 var arrClicked=[];
+var total=arr.length/2;
+var total_check=0;
 
 start.addEventListener('click', startGame);
 
