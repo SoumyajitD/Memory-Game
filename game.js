@@ -73,6 +73,10 @@ function check(image, k) {
                 
                 document.getElementById(k).src = "assets/" + image + ".jpg";
                 // alert("correct");
+                total_check++;
+                if(total_check==total){
+                    
+                }
                
 
 
