@@ -75,7 +75,7 @@ function check(image, k) {
                 // alert("correct");
                 total_check++;
                 if(total_check==total){
-                    
+                    alert("Win");
                 }
                
 
