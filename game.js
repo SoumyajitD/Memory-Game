@@ -39,6 +39,10 @@ setInterval(function startTimer () {
     if (seconds > 9){
       appendSeconds.innerHTML = seconds;
     }
+    if(total_check==check){
+        var seconds = 00; 
+        var tens = 00; 
+        }
     
   },1000);
 
