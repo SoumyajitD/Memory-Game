@@ -56,7 +56,7 @@ function startGame() {
         }
         k++;
     }
-    // alert(k);
+    alert(k);
     board.innerHTML = html;
 }
 function check(image, k) {
