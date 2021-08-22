@@ -4,7 +4,7 @@ var first = 0;
 firstID = 0;
 
 var arr = ["1", "2", "3", "4", "1", "2", "3", "4"];
-var count=arr.length()/2;
+var count=arr.length/2;
 var check=0;
 var cArr = ["0", "0"];
 var arrClicked=[];
