@@ -9,7 +9,10 @@ var arrClicked=[];
 
 start.addEventListener('click', startGame);
 
+
+
 function startGame() {
+    arr=arr.sort( () => .5 - Math.random() ); //Biased 
     var html = "";
     var k = 1;
     for (var image of arr) {
@@ -54,6 +57,7 @@ function check(image, k) {
                 }, 500);
             }
             first = 0;
+            
         }
     }
 
