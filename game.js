@@ -80,6 +80,8 @@ function check(image, k) {
                     alert("Win");
                     startGame();
                     total_check=0;
+                    var seconds = 00; 
+                    var tens = 00; 
                     
                 }
                
