@@ -84,7 +84,7 @@ function check(image, k) {
                     alert("Win");
                     startGame();
                     total_check=0;
-                    
+                    location.reload();
                     
                 }
                
