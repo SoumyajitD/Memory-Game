@@ -23,6 +23,8 @@ var appendSeconds = document.getElementById("seconds");
 
 function startGame() {
     
+    var seconds = 00; 
+    var tens = 00;  
     arr=arr.sort( () => .5 - Math.random() ); //Biased 
     
     var html = "";
