@@ -61,8 +61,7 @@ function startGame() {
     board.innerHTML = html;
 }
 function resetTimer(){
-    var seconds = 00; 
-    var tens = 00; 
+    break startTimer();
 }
 function check(image, k) {
     if (firstID != k) {
