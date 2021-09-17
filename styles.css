@@ -18,7 +18,7 @@
     color: white;
     -webkit-box-shadow: 2px 2px 2px #ff5f56;
     box-shadow: 2px 2px 2px #ff5f56;
-    border: 1px solid rgba(0, 0, 0, 0.342);
+    border: 1px solid rgba(0, 0, 0, 0.342); 
   }
   #title{
     text-align: center;
