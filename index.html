@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,21 +8,23 @@
     <link rel="stylesheet" href="styles.css">
     <title>Memory Game</title>
 </head>
+
 <body>
     <div class="wrapper">
-        <h1>Memory Game</h1>
+        <h1 id="title">Memory Game</h1>
         <h3>Click any card to begin</h3>
         <p><span id="seconds">00</span>:<span id="tens">00</span></p>
-        <p id ="text"></p>
-        
+        <p id="text"></p>
+
         <div id="board">
-      
+
         </div>
         <button id="start" onclick="startGame()" hidden>Start Game</button>
         <button id="restart" onclick="reStart()">Restart Game</button>
-      </div>
-        
+    </div>
+
 
     <script src="game.js"></script>
 </body>
+
 </html>

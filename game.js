@@ -6,60 +6,60 @@ firstID = 0;
 var arr = ["1", "2", "3", "4", "1", "2", "3", "4"];
 
 var cArr = ["0", "0"];
-var arrClicked=[];
-var total=arr.length/2;
-var total_check=0;
+var arrClicked = [];
+var total = arr.length / 2;
+var total_check = 0;
 
 start.addEventListener('click', startGame);
 
-var seconds = 00; 
-var tens = 00; 
+var seconds = 00;
+var tens = 00;
 var appendTens = document.getElementById("tens");
 var appendSeconds = document.getElementById("seconds");
 
 
-function reStart(){
-    
+function reStart() {
+
     location.reload();
-    
+
 
 }
 
 startGame();
 
 
-function startTimer () {
-    tens++; 
-      
-    if(tens < 9){
-      appendTens.innerHTML = "0" + tens;
-    }
-      
-    if (tens > 9){
-      appendTens.innerHTML = tens;
-        
-    } 
-      
-    if (tens > 59) {
-      seconds++;
-      appendSeconds.innerHTML = "0" + seconds;
-      tens = 0;
-      appendTens.innerHTML = "0" + 0;
-    }
-      
-    if (seconds > 9){
-      appendSeconds.innerHTML = seconds;
-    }
-   
-    
-  }
+function startTimer() {
+    tens++;
 
-  var timer=setInterval(startTimer,1000);
+    if (tens < 9) {
+        appendTens.innerHTML = "0" + tens;
+    }
+
+    if (tens > 9) {
+        appendTens.innerHTML = tens;
+
+    }
+
+    if (tens > 59) {
+        seconds++;
+        appendSeconds.innerHTML = "0" + seconds;
+        tens = 0;
+        appendTens.innerHTML = "0" + 0;
+    }
+
+    if (seconds > 9) {
+        appendSeconds.innerHTML = seconds;
+    }
+
+
+}
+
+var timer = setInterval(startTimer, 1000);
 function startGame() {
-    
-     
-    arr=arr.sort( () => .5 - Math.random() ); //Biased 
-    
+
+
+    arr = arr.sort(() => .5 - Math.random()); //Biased 
+
     var html = "";
     var k = 1;
     for (var image of arr) {
@@ -71,8 +71,8 @@ function startGame() {
     }
     // alert(k);
     board.innerHTML = html;
-   
-      
+
+
 }
 
 function check(image, k) {
@@ -86,24 +86,24 @@ function check(image, k) {
         else {
             if (first == image) {
 
-                
+
                 document.getElementById(k).src = "assets/" + image + ".jpg";
                 // alert("correct");
 
                 document.getElementById(firstID).removeAttribute('onClick');
-                    document.getElementById(k).removeAttribute('onClick');
+                document.getElementById(k).removeAttribute('onClick');
                 total_check++;
-                if(total_check==total){
+                if (total_check == total) {
                     // alert("Win");
-                    
-                    total_check=0;
-                    board.innerHTML="You win Hoorah!"+" Your time is "+seconds+":"+tens;
+
+                    total_check = 0;
+                    board.innerHTML = "You win Hoorah!" + " Your time is " + seconds + ":" + tens;
                     clearInterval(timer);
-                    
-                    
-                    
+
+
+
                 }
-               
+
 
 
 
